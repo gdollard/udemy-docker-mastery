@@ -14,5 +14,7 @@ services:
       - '80:80'
   web:
     image: httpd
+
+    # using a bind mount here so I can edit the content on the fly, typical dev setup
     volumes:
       - ./html:/usr/local/apache2/htdocs/
